@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Retours Clients - Hôtel</title>
+    <link rel="stylesheet"type="text/css"href="{{ url_for('static', filename='projet.css') }}"/>
+</head>
+<body>
+    
+    <div class="banner">
+        <img src="static\banners\SOFITEL.1.jpg">
+        <img src="static\banners\SOFITEL2.jpg">
+        <img src="static\banners\SOFITEL.3.jpg">
+        <img src="static\banners\SOFITEL.4.jpg">
+        <img src="static\banners\SOFITEL.5.jpg">
+        <img src="static\banners\SOFITEL.6.jpg">
+        <img src="static\banners\SOFITEL.7.jpg">
+        <img src="static\banners\SOFITEL.8.jpg">
+        <img src="static\banners\SOFITEL.9.jpg">
+        <img src="static\banners\SOFITEL.10.jpg">
+        <img src="static\banners\SOFITEL.11.jpg">
+        <img src="static\banners\SOFITEL.12.jpg">
+        <img src="static\banners\SOFITEL.13.jpg">
+        <img src="static\banners\SOFITEL.14.jpg">
+        <img src="static\banners\SOFITEL.15.jpg">
+        <img src="static\banners\SOFITEL.16.jpg">
+        <img src="static\banners\SOFITEL.17.jpg">
+        <img src="static\banners\SOFITEL.18.jpg">
+        <img src="static\banners\SOFITEL.19.jpg">
+        <img src="static\banners\SOFITEL.20.jpg">
+        <img src="static\banners\SOFITEL.21.jpg">
+        <img src="static\banners\SOFITEL.22.jpg">
+        <img src="static\banners\SOFITEL.23.jpg">
+        <img src="static\banners\SOFITEL.24.jpg">
+        <img src="static\banners\SOFITEL.25.jpg">
+        <img src="static\banners\SOFITEL.26.jpg">
+        <img src="static\banners\SOFITEL.27.jpg">
+        <img src="static\banners\SOFITEL.28.jpg">
+        <img src="static\banners\SOFITEL.29.jpg">
+        <img src="static\banners\SOFITEL.30.jpg">
+        <img src="static\banners\SOFITEL.31.jpg">
+        <img src="static\banners\SOFITEL.32.jpg">
+        <img src="static\banners\SOFITEL.33.jpg">
+        <img src="static\banners\SOFITEL.34.jpg">
+        <img src="static\banners\SOFITEL.35.jpg">
+        <img src="static\banners\SOFITEL.36.jpg">
+        <img src="static\banners\SOFITEL.37.jpg">
+        <img src="static\banners\SOFITEL.38.jpg">
+        <img src="static\banners\SOFITEL.39.jpg">
+        <img src="static\banners\SOFITEL.40.jpg">
+        <img src="static\banners\SOFITEL.41.jpg">
+        <img src="static\banners\SOFITEL.42.jpg">
+        
+
+        <div class="banner-text">
+            <h1>Bienvenue à Notre Hôtel</h1>
+            <p>Votre satisfaction est notre priorité</p>
+        </div>
+    </div>
+    <header>
+        <h1>Gestion des Retours Clients - Hôtel</h1>
+    </header>
+    <select id="service" name="service_id" required></select>
+    <main>
+
+        <section id="form">
+            <h2>Soumettre un Retour Client</h2>
+<form id="feedbackForm" action="{{ url_for('submit_feedback') }}" method="post">
+                <label for="name">Nom Complet:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Date du Séjour:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="commentaire">Commentaire:</label>
+        <textarea id="commentaire" name="commentaire" rows="4" required></textarea>
+        
+            
+                <h2><p>Quels services avez-vous utilisés?</p></h2>
+
+                <label for="Proproté">Proproté</label>
+                <div class="note-section">
+                    <label for="noteProproté">Note (de 1 à 5):</label>
+                    <input type="number" id="noteProproté" name="noteProproté" min="1" max="5">
+                </div>
+
+                <label for="Personnel">Personnel</label>
+                <div class="note-section">
+                    <label for="notePersonnel">Note (de 1 à 5):</label>
+                    <input type="number" id="notePersonnel" name="notePersonnel" min="1" max="5">
+                </div>
+
+                <label for="SituationGéographique">Situation Géographique</label>
+                <div class="note-section">
+                    <label for="noteSituationGéographique">Note (de 1 à 5):</label>
+                    <input type="number" id="noteSituationGéographique" name="noteSituationGéographique" min="1" max="5">
+                </div>
+
+                <label for="serviceChambre">Chambre</label>
+                <div class="note-section">
+                    <label for="noteChambre">Note (de 1 à 5):</label>
+                    <input type="number" id="noteChambre" name="noteChambre" min="1" max="5">
+                </div>
+
+                <label for="serviceRestaurant">Restauration</label>
+                <div class="note-section">
+                    <label for="noteRestaurant">Note (de 1 à 5):</label>
+                    <input type="number" id="noteRestaurant" name="noteRestaurant" min="1" max="5">
+                </div>
+
+               <label for="Equipement">Equipement</label>
+                <div class="note-section">
+                    <label for="noteEquipement">Note (de 1 à 5):</label>
+                    <input type="number" id="noteEquipement" name="noteEquipement" min="1" max="5">
+                </div>
+
+                <label for="serviceWifi">WiFi</label>
+                <div class="note-section">
+                    <label for="noteWifi">Note (de 1 à 5):</label>
+                    <input type="number" id="noteWifi" name="noteWifi" min="1" max="5">
+                </div>
+
+                <label for="serviceParking">Parking</label>
+                <div class="note-section">
+                    <label for="noteParking">Note (de 1 à 5):</label>
+                    <input type="number" id="noteParking" name="noteParking" min="1" max="5">
+                </div>
+
+                <label for="servicePool">Piscine</label>
+                <div class="note-section">
+                    <label for="notePool">Note (de 1 à 5):</label>
+                    <input type="number" id="notePool" name="notePool" min="1" max="5">
+                </div>
+
+                <label for="serviceSpa">Spa</label>
+                <div class="note-section">
+                    <label for="noteSpa">Note (de 1 à 5):</label>
+                    <input type="number" id="noteSpa" name="noteSpa" min="1" max="5">
+                </div>
+
+                <label for="serviceSalledesport">Salle de sport</label>
+                <div class="note-section">
+                    <label for="noteSalledesport">Note (de 1 à 5):</label>
+                    <input type="number" id="noteSalledesport" name="noteSalledesport" min="1" max="5">
+                </div>
+
+                <label for="serviceTransport">Transport</label>
+                <div class="note-section">
+                    <label for="noteTransport">Note (de 1 à 5):</label>
+                    <input type="number" id="noteTransport" name="noteTransport" min="1" max="5">
+                </div>
+
+                <label for="serviceNavetteaéroport">Navette aéroport</label>
+                <div class="note-section">
+                    <label for="noteNavetteaéroport">Note (de 1 à 5):</label>
+                    <input type="number" id="noteNavetteaéroport" name="noteNavetteaéroport" min="1" max="5">
+                </div>
+
+                <label for="serviceEnfant">Service Enfant</label>
+                <div class="note-section">
+                    <label for="noteEnfant">Note (de 1 à 5):</label>
+                    <input type="number" id="noteEnfant" name="noteEnfant" min="1" max="5">
+                </div>
+
+                <label for="serviceBar">Bar</label>
+                <div class="note-section">
+                    <label for="noteBar">Note (de 1 à 5):</label>
+                    <input type="number" id="noteBar" name="noteBar" min="1" max="5">
+                </div>
+
+                <label for="RapportQualité/Prix">Rapport Qualité/Prix</label>
+                <div class="note-section">
+                    <label for="noteRapportQualité/Prix">Note (de 1 à 5):</label>
+                    <input type="number" id="noteRapportQualité/Prix" name="noteRapportQualité/Prix" min="1" max="5">
+                </div>
+                
+            </form>
+
+            <h2>Questionnaire de Satisfaction</h2>
+            <form>
+                <form>
+                    <h3>Raison du séjour et satisfaction globale</h3>
+                    <label>1. Quelle a été la principale raison de votre séjour chez nous ?</label><br>
+                    <select name="reason">
+                        <option value="loisirs">Loisirs</option>
+                        <option value="affaires">Affaires</option>
+                        <option value="famille">Visite familiale</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                    <br><br>
+                
+                    <label>2. Comment évalueriez-vous votre satisfaction globale avec notre hôtel ?</label><br>
+                    <div>
+                    <input type="radio" name="satisfaction" value="très_satisfait"> Très satisfait<br>
+                    <input type="radio" name="satisfaction" value="satisfait"> Satisfait<br>
+                    <input type="radio" name="satisfaction" value="neutre"> Neutre<br>
+                    <input type="radio" name="satisfaction" value="insatisfait"> Insatisfait<br>
+                    <input type="radio" name="satisfaction" value="très_insatisfait"> Très insatisfait<br><br>
+                </div>
+                    <label>3. Le rapport qualité/prix de notre hôtel vous semble-t-il ?</label><br>
+                    <div>
+                    <input type="radio" name="qualité_prix" value="excellent"> Excellent<br>
+                    <input type="radio" name="qualité_prix" value="bon"> Bon<br>
+                    <input type="radio" name="qualité_prix" value="correct"> Correct<br>
+                    <input type="radio" name="qualité_prix" value="mauvais"> Mauvais<br>
+                    <input type="radio" name="qualité_prix" value="très_mauvais"> Très mauvais<br><br>
+                </div>
+                    <label>4. Votre séjour a-t-il répondu à vos attentes ?</label><br>
+                    <div>
+                    <input type="radio" name="attentes" value="tout_a_fait"> Tout à fait<br>
+                    <input type="radio" name="attentes" value="majoritairement"> Majoritairement<br>
+                    <input type="radio" name="attentes" value="moyennement"> Moyennement<br>
+                    <input type="radio" name="attentes" value="en_partie"> En partie<br>
+                    <input type="radio" name="attentes" value="pas_du_tout"> Pas du tout<br><br>
+                </div>
+                    <label>5. Avez-vous rencontré des problèmes durant votre séjour ?</label><br>
+                    <div>
+                    <input type="radio" name="problemes" value="oui"> Oui<br>
+                    <input type="radio" name="problemes" value="non"> Non<br><br>
+                    <label>Si oui, lesquels ?</label><br>
+                    <textarea name="details_problemes"></textarea><br><br>
+                </div>
+                    <h3>Hébergement et confort</h3>
+                    <label>6. Comment évalueriez-vous l’état général de la chambre à votre arrivée ?</label><br>
+                    <div>
+                    <input type="radio" name="etat_chambre" value="excellent"> Excellent<br>
+                    <input type="radio" name="etat_chambre" value="bon"> Bon<br>
+                    <input type="radio" name="etat_chambre" value="correct"> Correct<br>
+                    <input type="radio" name="etat_chambre" value="mauvais"> Mauvais<br>
+                    <input type="radio" name="etat_chambre" value="très_mauvais"> Très mauvais<br><br>
+                </div>
+                    <label>7. La température de la chambre était-elle :</label><br>
+                    <div>
+                    <input type="radio" name="temperature_chambre" value="juste_comme_il_faut"> Juste comme il faut<br>
+                    <input type="radio" name="temperature_chambre" value="chaude"> Chaude<br>
+                    <input type="radio" name="temperature_chambre" value="trop_chaude"> Trop chaude<br>
+                    <input type="radio" name="temperature_chambre" value="froide"> froide<br>
+                    <input type="radio" name="temperature_chambre" value="trop_froide"> Trop froide<br>
+                    <br></div>
+                
+                    <label>8. Comment évalueriez-vous la qualité de la literie ?</label><br>
+                    <div>
+                    <input type="radio" name="qualité_literie" value="excellente"> Excellente<br>
+                    <input type="radio" name="qualité_literie" value="bonne"> Bonne<br>
+                    <input type="radio" name="qualité_literie" value="correcte"> Correcte<br>
+                    <input type="radio" name="qualité_literie" value="mauvaise"> Mauvaise<br>
+                    <input type="radio" name="qualité_literie" value="très_mauvaise"> Très mauvaise<br><br>
+                </div>
+                
+                    <label>9. Les équipements de la chambre (TV, climatisation, minibar, etc.) étaient-ils fonctionnels ?</label><br>
+                    <div>
+                    <input type="radio" name="equipements_fonctionnels" value="tous"> Oui, tous<br>
+                    <input type="radio" name="equipements_fonctionnels" value="la_plupart"> La plupart<br>
+                    <input type="radio" name="equipements_fonctionnels" value="quelques_uns"> Quelques-uns<br>
+                    <input type="radio" name="equipements_fonctionnels" value="aucun"> Non, aucun<br><br>
+                </div>
+                    <label>10. Comment évalueriez-vous la propreté générale de l’hôtel ?</label><br>
+                    <div>
+                    <input type="radio" name="proprete_hotel" value="excellente"> Excellente<br>
+                    <input type="radio" name="proprete_hotel" value="bonne"> Bonne<br>
+                    <input type="radio" name="proprete_hotel" value="correcte"> Correcte<br>
+                    <input type="radio" name="proprete_hotel" value="mauvaise"> Mauvaise<br>
+                    <input type="radio" name="proprete_hotel" value="très_mauvaise"> Très mauvaise<br><br>
+                </div>
+                
+                    <h3>Services de l'hôtel</h3>
+                    <label>11. Comment évalueriez-vous la rapidité du check-in/check-out ?</label><br>
+                    <div>
+                    <input type="radio" name="checkin_checkout" value="très_rapide"> Très rapide<br>
+                    <input type="radio" name="checkin_checkout" value="rapide"> Rapide<br>
+                    <input type="radio" name="checkin_checkout" value="moyenne"> Moyenne<br>
+                    <input type="radio" name="checkin_checkout" value="lente"> Lente<br>
+                    <input type="radio" name="checkin_checkout" value="très_lente"> Très lente<br>
+                    <br></div>
+                
+                    <label>12. Le personnel était-il :</label><br>
+                    <div>
+                    <input type="radio" name="personnel" value="très_agréable"> Très agréable<br>
+                    <input type="radio" name="personnel" value="agréable"> Agréable<br>
+                    <input type="radio" name="personnel" value="neutre"> Neutre<br>
+                    <input type="radio" name="personnel" value="désagréable"> Désagréable<br>
+                    <input type="radio" name="personnel" value="très_désagréable"> Très désagréable<br>
+                    <br></div>
+                
+                    <label>13. Comment évalueriez-vous la qualité de notre Wi-Fi ?</label><br>
+                    <div>
+                    <input type="radio" name="wifi" value="excellente"> Excellente<br>
+                    <input type="radio" name="wifi" value="bonne"> Bonne<br>
+                    <input type="radio" name="wifi" value="moyenne"> Moyenne<br>
+                    <input type="radio" name="wifi" value="mauvaise"> Mauvaise<br>
+                    <input type="radio" name="wifi" value="très_mauvaise"> Très mauvaise<br>
+                    <br></div>
+                
+                    <label>14. Avez-vous utilisé notre service de navette ?</label><br>
+                    <div>
+                    <input type="radio" name="navette" value="oui"> Oui<br>
+                    <input type="radio" name="navette" value="non"> Non<br><br></div>
+                    <label>Si oui, comment évalueriez-vous ce service ?</label><br>
+                    <div>
+                    <input type="radio" name="eval_navette" value="excellent"> Excellent<br>
+                    <input type="radio" name="eval_navette" value="bon"> Bon<br>
+                    <input type="radio" name="eval_navette" value="correct"> Correct<br>
+                    <input type="radio" name="eval_navette" value="mauvais"> Mauvais<br>
+                    <input type="radio" name="eval_navette" value="très_mauvais"> Très mauvais<br>
+                    <br></div>
+                
+                    <label>15. Avez-vous utilisé le service de conciergerie ?</label><br><div>
+                    <input type="radio" name="conciergerie" value="oui" onclick="document.getElementById('conciergerie_eval').style.display='block'"> Oui<br>
+                    <input type="radio" name="conciergerie" value="non" onclick="document.getElementById('conciergerie_eval').style.display='none'"> Non<br></div>
+                    <div id="conciergerie_eval" style="display:none;">
+                        <label>Si oui, comment évalueriez-vous ce service ?</label><br>
+                        <input type="radio" name="eval_conciergerie" value="excellent"> Excellent<br>
+                        <input type="radio" name="eval_conciergerie" value="bon"> Bon<br>
+                        <input type="radio" name="eval_conciergerie" value="correct"> Correct<br>
+                        <input type="radio" name="eval_conciergerie" value="mauvais"> Mauvais<br>
+                        <input type="radio" name="eval_conciergerie" value="très_mauvais"> Très mauvais<br>
+                        <br>
+                    </div>
+                    <label>16. Comment évalueriez-vous le service de ménage pendant votre séjour ?</label><br>
+                    <div>
+                    <input type="radio" name="menage" value="excellent"> Excellent<br>
+                    <input type="radio" name="menage" value="bon"> Bon<br>
+                    <input type="radio" name="menage" value="correct"> Correct<br>
+                    <input type="radio" name="menage" value="mauvais"> Mauvais<br>
+                    <input type="radio" name="menage" value="très_mauvais"> Très mauvais<br>
+                    <br></div>
+
+                    <h3>Restauration</h3>
+                    <label>17. Comment évalueriez-vous la variété des options au petit-déjeuner ?</label><br><div>
+                    <input type="radio" name="variete_petit_dejeuner" value="excellente"> Excellente<br>
+                    <input type="radio" name="variete_petit_dejeuner" value="bonne"> Bonne<br>
+                    <input type="radio" name="variete_petit_dejeuner" value="correcte"> Correcte<br>
+                    <input type="radio" name="variete_petit_dejeuner" value="mauvaise"> Mauvaise<br>
+                    <input type="radio" name="variete_petit_dejeuner" value="trés_mauvaise"> trés Mauvaise<br>
+                    <br></div>
+                    <label>18. La qualité des repas servis était-elle :</label><br><div>
+                    <input type="radio" name="qualite_repas" value="excellente"> Excellente<br>
+                    <input type="radio" name="qualite_repas" value="bonne"> Bonne<br>
+                    <input type="radio" name="qualite_repas" value="correcte"> Correcte<br>
+                    <input type="radio" name="qualite_repas" value="mauvaise"> Mauvaise<br>
+                    <input type="radio" name="qualite_repas" value="très_mauvaise"> Très mauvaise<br>
+                    <br></div>
+                    <label>19. Le service de restaurant était-il :</label><br><div>
+                    <input type="radio" name="service_restaurant" value="très_rapide"> Très rapide<br>
+                    <input type="radio" name="service_restaurant" value="rapide"> Rapide<br>
+                    <input type="radio" name="service_restaurant" value="moyen"> Moyen<br>
+                    <input type="radio" name="service_restaurant" value="lent"> Lent<br>
+                    <input type="radio" name="service_restaurant" value="très_lent"> Très lent<br>
+                    <br></div>
+
+                    <h3>Activités et divertissements</h3><div>
+                    <label>20. Avez-vous participé à des activités organisées par l’hôtel ?</label><br>
+                    <input type="radio" name="activites" value="oui" onclick="document.getElementById('activites_eval').style.display='block'"> Oui<br>
+                    <input type="radio" name="activites" value="non" onclick="document.getElementById('activites_eval').style.display='none'"> Non<br></div>
+
+                    <div id="activites_eval" style="display:none;">
+                        <label>Si oui, comment évalueriez-vous ces activités ?</label><br>
+                        <input type="radio" name="eval_activites" value="excellentes"> Excellentes<br>
+                        <input type="radio" name="eval_activites" value="correctes"> Correctes<br>
+                        <input type="radio" name="eval_activites" value="bonnes"> Bonnes<br>
+                        <input type="radio" name="eval_activites" value="mauvaises"> Mauvaises<br>
+                        <input type="radio" name="eval_activites" value="très_mauvaises"> Très mauvaises<br>
+                        <br>
+                    </div>
+
+                    <h3>Recommandations et retour d'expérience</h3>
+                    <label>21. Recommanderiez-vous notre hôtel à vos amis ou collègues ?</label><br><div>
+                    <input type="radio" name="recommande" value="oui"> Oui<br>
+                    <input type="radio" name="recommande" value="non"> Non<br><br></div>
+                    <label>22. Serez-vous intéressé à recevoir nos offres spéciales par e-mail ?</label><br><div>
+                    <input type="radio" name="offres_email" value="oui"> Oui<br>
+                    <input type="radio" name="offres_email" value="non"> Non<br><br></div>
+                    <label>23. Seriez-vous intéressé à revenir dans notre hôtel lors de votre prochain séjour dans la région ?</label><br><div>
+                    <input type="radio" name="revenir" value="oui"> Oui<br>
+                    <input type="radio" name="revenir" value="non"> Non<br><br></div>
+                    <label>24. Pensez-vous que le prix payé était justifié par les services reçus ?</label><br><div>
+                    <input type="radio" name="justification_prix" value="tout_a_fait"> Tout à fait<br>
+                    <input type="radio" name="justification_prix" value="majoritairement"> Majoritairement<br>
+                    <input type="radio" name="justification_prix" value="moyennement"> Moyennement<br>
+                    <input type="radio" name="justification_prix" value="en_partie"> En partie<br>
+                    <input type="radio" name="justification_prix" value="pas_du_tout"> Pas du tout<br>
+                    <br></div>
+                    <label>25. Quelle est la probabilité que vous reveniez dans notre hôtel lors de votre prochain séjour ?</label><br><div>
+                    <input type="radio" name="probabilite_revenir" value="très_probable"> Très probable<br>
+                    <input type="radio" name="probabilite_revenir" value="probable"> Probable<br>
+                    <input type="radio" name="probabilite_revenir" value="neutre"> Neutre<br>
+                    <input type="radio" name="probabilite_revenir" value="improbable"> Improbable<br>
+                    <input type="radio" name="probabilite_revenir" value="très_improbable"> Très improbable<br>
+                    <br></div>
+                    <label>26. Quelle est la probabilité que vous recommandiez notre hôtel à vos proches ?</label><br><div>
+                    <input type="radio" name="probabilite_recommander" value="très_probable"> Très probable<br>
+                    <input type="radio" name="probabilite_recommander" value="probable"> Probable<br>
+                    <input type="radio" name="probabilite_recommander" value="neutre"> Neutre<br>
+                    <input type="radio" name="probabilite_recommander" value="improbable"> Improbable<br>
+                    <input type="radio" name="probabilite_recommander" value="très_improbable"> Très improbable<br>
+                    <br></div>
+                    <label>27. En général, comment décririez-vous votre expérience avec notre hôtel ?</label><br><div>
+                    <input type="radio" name="experience" value="très_bonne"> Très bonne<br>
+                    <input type="radio" name="experience" value="bonne"> Bonne<br>
+                    <input type="radio" name="experience" value="neutre"> Neutre<br>
+                    <input type="radio" name="experience" value="mauvaise"> Mauvaise<br>
+                    <input type="radio" name="experience" value="très_mauvaise"> Très mauvaise<br>
+                    <br></div>
+
+
+                    <a href="/thank_you" class="button">Soumettre</a>
+
+                </form>     
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gestion des Retours Clients - Hôtel</p>
+    </footer>
+</body>
+</html>
