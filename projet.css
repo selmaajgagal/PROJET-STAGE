@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    background-image: url('C:/Users/HP/Downloads/projet/Sofitel.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner {
+    display: flex;
+    height: 150px;
+    width: 400%; 
+    animation: scroll 30s linear infinite;
+
+
+}
+
+
+.banner img {
+    width: 11.111%; 
+}
+
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    background-color: #455073 ;
+    padding: 60px;
+    border-radius: 10px;
+}
+
+header, footer {
+    background-color: #455073;
+    color: #C0904D;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+}
+
+#presentation, #form, #confirmation {
+    max-width: 600px;
+    margin: 2em auto;
+    background-color: #455073;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #000000 ;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    color: #c0904d  ;
+}
+input, textarea, button {
+    padding: 0.75em;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+}
+
+input:focus, textarea:focus {
+    border-color: #000000  ;
+    outline: none;
+}
+
+button {
+    background-color: #c0904d ;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #455073;
+}
+
+.note-section {
+    margin-bottom: 1em;
+}
+
+footer {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #6077C0;
+    color: #f8f9fa;
+    text-align: center;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#C0904D;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #d28314;
+}
+body{
+    overflow-x : hidden;
+}
